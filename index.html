@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html >
+<head>
+<style>
+
+</style>
+</head>
+  <body>
+    <h1 id="header">Color and Text to modify</h1>
+    <p>Change me to Blue, Green, Purple or Pink by typing your value below. Unknown values will be Yellow and report as such.</p>
+    <input type="text" id="inp">
+    <button type="button" onclick="pressed()">Click me</button>
+      <script>
+        //two forward slashes are comment-outs. The "computer" ignores them and doesn't run the code.
+        //It's for people to read, not the computer.
+        //below is the function needed right in the html page.
+        //This is kind of an amateur design. Usually there would be another file with what's written below
+        //and right here would just be calling to that file instead of writing it directly into the main html webpage
+        //but that would add complexity and uneccessarily make what is a mostly simple program more difficult
+        //for someone who isn't familiar with the norms and practices
+        function pressed(){
+          var text = document.getElementById('inp').value;
+          switch (text) {
+          //if the user uses a Proper noun
+          //if the user doesn't capitalize
+          case 'Blue':
+          case 'blue':
+          document.getElementById('header').style.color = 'Blue';
+          document.getElementById('header').innerHTML = 'Blue'
+          break;
+          case 'Green':
+          case 'green':
+          document.getElementById('header').style.color = 'Green';
+          document.getElementById('header').innerHTML = 'Green'
+          break;
+          case 'Purple':
+          case 'purple':
+          document.getElementById('header').style.color = 'Purple';
+          document.getElementById('header').innerHTML = 'Purple'
+          break;
+          //if the user uses a Proper noun
+          //if the user doesn't capitalize
+          case 'Pink':
+          case 'pink':
+          document.getElementById('header').style.color = 'Pink';
+          document.getElementById('header').innerHTML = 'Pink'
+          break;
+          // what will show if the user types something not listed above
+          default:
+          document.getElementById('header').style.color = 'yellow';
+          document.getElementById('header').innerHTML = 'Unkown Value!'
+        }
+            }
+      </script>
+  </body>
+</html>
